@@ -5,7 +5,7 @@ import { parseEther } from "viem";
 import { contractConfig } from "../web3/contract";
 import { erc20Abi } from "../web3/erc20";
 
-const TOKEN_ADDRESS = "0xYourERC20TokenAddress";
+const TOKEN_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 const VaultForm = () => {
   const { writeContractAsync } = useWriteContract();
@@ -25,7 +25,7 @@ const VaultForm = () => {
         args: [contractConfig.address, parseEther(amount)],
       });
 
-      // 2️⃣ Call addnominee
+      
       await writeContractAsync({
         ...contractConfig,
         functionName: "addnominee",

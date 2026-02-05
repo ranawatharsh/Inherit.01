@@ -3,72 +3,175 @@
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "_nominee",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_token",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "addnominee",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
 				"name": "owner",
 				"type": "address"
 			},
 			{
-				"internalType": "address",
-				"name": "spender",
-				"type": "address"
-			}
-		],
-		"name": "allowance",
-		"outputs": [
-			{
+				"indexed": false,
 				"internalType": "uint256",
-				"name": "",
+				"name": "timestamp",
 				"type": "uint256"
 			}
 		],
-		"stateMutability": "view",
+		"name": "CheckedIn",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "checkin",
+		"outputs": [],
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "account",
+				"name": "_owner",
 				"type": "address"
 			}
 		],
-		"name": "balanceOf",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
+		"name": "claim",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
+		"anonymous": false,
 		"inputs": [
 			{
+				"indexed": true,
 				"internalType": "address",
-				"name": "from",
+				"name": "owner",
 				"type": "address"
 			},
 			{
+				"indexed": true,
 				"internalType": "address",
-				"name": "to",
+				"name": "nominee",
 				"type": "address"
 			},
 			{
+				"indexed": false,
 				"internalType": "uint256",
 				"name": "amount",
 				"type": "uint256"
 			}
 		],
-		"name": "transferFrom",
-		"outputs": [
+		"name": "Claimed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
 			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "nominee",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "token",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
 			}
 		],
-		"stateMutability": "nonpayable",
+		"name": "NomineeAdded",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "DEFAULT_TIMEOUT",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "vaults",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "nominee",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "tokenaddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "lastcheck",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timeout",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amounttogive",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	}
 ]
